@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-topbar',
@@ -37,6 +38,15 @@ import { CommonModule } from '@angular/common';
           <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-[10px] font-bold text-white flex items-center justify-center rounded-full border-2 border-neutral-900">3</span>
         </button>
 
+        <!-- Logout Button -->
+        <button (click)="logout()" 
+                title="Secure Logout"
+                class="p-2 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg text-neutral-400 hover:text-red-500 transition-all active:scale-95 group">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+           </svg>
+        </button>
+
         <!-- User Profile -->
         <div class="flex items-center gap-3 pl-6 border-l border-neutral-800">
           <div class="text-right hidden sm:block">
@@ -51,4 +61,10 @@ import { CommonModule } from '@angular/common';
     </header>
   `
 })
-export class TopbarComponent {}
+export class TopbarComponent {
+  constructor(private authService: AuthService) {}
+
+  logout() {
+    this.authService.logout();
+  }
+}
