@@ -10,7 +10,6 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    canActivate: [AuthGuard],
     loadComponent: () => import('./features/home/home.page').then(m => m.HomePage)
   },
   {

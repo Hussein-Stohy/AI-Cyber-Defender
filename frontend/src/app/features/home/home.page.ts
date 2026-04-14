@@ -14,8 +14,19 @@ import { RouterModule } from '@angular/router';
         <div class="absolute bottom-[0%] right-[0%] w-[30%] h-[30%] bg-primary/10 blur-[100px] rounded-full"></div>
       </div>
 
+      <!-- Navigation Header -->
+      <nav class="relative z-50 flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+           <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-black">AI</div>
+           <span class="text-sm font-black uppercase tracking-widest text-white">Cyber Defender</span>
+        </div>
+        <button routerLink="/login" class="px-5 py-2 rounded-full border border-neutral-800 hover:border-primary/50 text-xs font-bold uppercase tracking-widest transition-all hover:text-primary">
+          Sign In
+        </button>
+      </nav>
+
       <!-- Hero Section -->
-      <section class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
+      <section class="relative pt-20 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
            <span class="text-[10px] font-black uppercase tracking-widest text-primary">v2.4 Powered by Neural Defense</span>
@@ -32,12 +43,12 @@ import { RouterModule } from '@angular/router';
         <div class="mt-12 flex flex-col sm:flex-row gap-4 items-center">
           <button routerLink="/dashboard" 
                   class="group relative px-8 py-4 bg-primary text-white font-black uppercase tracking-widest rounded-xl overflow-hidden active:scale-95 transition-all shadow-lg shadow-primary/20">
-            <span class="relative z-10 font-bold">Enter Dashboard</span>
+            <span class="relative z-10 font-bold">Start Investigation</span>
             <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </button>
-          <button routerLink="/live" 
+          <button routerLink="/login" 
                   class="px-8 py-4 bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 font-bold uppercase tracking-widest rounded-xl transition-all active:scale-95">
-            View Live Monitoring
+            Analyst Login
           </button>
         </div>
       </section>
