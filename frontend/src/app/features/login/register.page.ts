@@ -135,15 +135,15 @@ export class RegisterPage {
     this.successMessage = '';
 
     this.authService.register(this.user.name, this.user.username, this.user.password).subscribe({
-      next: (success) => {
+      next: (res) => {
         this.isLoading = false;
-        if (success) {
-          this.successMessage = 'Account created successfully! Redirecting to login...';
+        if (res.success) {
+          this.successMessage = res.message || 'Account created successfully! Redirecting to login...';
           setTimeout(() => {
             this.router.navigate(['/login']);
           }, 2000);
         } else {
-          this.errorMessage = 'Registration failed. Username might already be taken.';
+          this.errorMessage = res.message || 'Registration failed. Username might already be taken.';
         }
       },
       error: () => {

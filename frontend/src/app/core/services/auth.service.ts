@@ -62,14 +62,17 @@ export class AuthService {
    * Register a new user
    * POST /api/auth/register
    */
-  register(name: string, username: string, password: string): Observable<boolean> {
-    return this.http.post<ApiResponse<any>>(`${this.apiUrl}/register`, {
+  register(name: string, username: string, password: string): Observable<{ success: boolean; message?: string }> {
+    return this.http.post<any>(`${this.apiUrl}/register`, {
       name,
       username,
       password
     }).pipe(
-      map(response => !!response?.data),
-      catchError(() => of(false))
+      map(response => ({ success: true, message: response?.meta?.message })),
+      catchError(error => {
+        const message = error.error?.error || 'Registration failed';
+        return of({ success: false, message });
+      })
     );
   }
 
