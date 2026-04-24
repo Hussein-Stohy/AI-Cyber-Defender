@@ -2,13 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardService } from '../../core/services/dashboard.service';
 import { DashboardData } from '../../core/models/dashboard.model';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   imports: [CommonModule],
   template: `
+    <!-- Loading State -->
+    <div *ngIf="isLoading" class="h-96 flex flex-col items-center justify-center gap-4 text-neutral-500">
+      <div class="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+      <p class="font-bold uppercase tracking-widest text-xs">Loading command center data...</p>
+    </div>
+
+    <!-- Error State -->
+    <div *ngIf="errorMessage" class="h-96 flex flex-col items-center justify-center gap-4 text-neutral-500">
+      <div class="text-5xl opacity-30">⚠️</div>
+      <p class="text-red-400 font-bold text-sm">{{ errorMessage }}</p>
+      <button (click)="retry()" class="px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg uppercase tracking-widest">Retry</button>
+    </div>
+
     <div class="space-y-8 pb-12" *ngIf="data$ | async as data">
       <!-- Header -->
       <header>
@@ -156,14 +169,35 @@ export class DashboardPage implements OnInit {
   points: {x: number, y: number}[] = [];
   linePathBorder: string = '';
   linePathArea: string = '';
+  isLoading = true;
+  errorMessage = '';
 
   constructor(private dashboardService: DashboardService) {}
 
   ngOnInit(): void {
-    this.data$ = this.dashboardService.getDashboardData();
+    this.loadData();
+  }
+
+  loadData(): void {
+    this.isLoading = true;
+    this.errorMessage = '';
+    this.data$ = this.dashboardService.getDashboardData().pipe(
+      catchError(err => {
+        this.errorMessage = 'Failed to load dashboard data. Please check your connection.';
+        this.isLoading = false;
+        return of(null as any);
+      })
+    );
     this.data$.subscribe(data => {
-      this.calculatePaths(data.trends);
+      this.isLoading = false;
+      if (data) {
+        this.calculatePaths(data.trends);
+      }
     });
+  }
+
+  retry(): void {
+    this.loadData();
   }
 
   private calculatePaths(trends: any[]) {

@@ -8,6 +8,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/login/login.page').then(m => m.LoginPage)
   },
   {
+    path: 'register',
+    loadComponent: () => import('./features/login/register.page').then(m => m.RegisterPage)
+  },
+  {
     path: '',
     pathMatch: 'full',
     loadComponent: () => import('./features/home/home.page').then(m => m.HomePage)

@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AttackService } from '../../../core/services/attack.service';
 import { Attack, AttackFilters } from '../../../core/models/attack.model';
-import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-attacks-list',
@@ -52,8 +51,19 @@ import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
         </div>
       </header>
 
+      <!-- Loading State -->
+      <div *ngIf="isLoading" class="flex items-center justify-center py-20">
+        <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+      </div>
+
+      <!-- Error State -->
+      <div *ngIf="errorMessage" class="bg-red-500/10 border border-red-500/20 text-red-400 p-6 rounded-2xl text-center">
+        <p class="font-bold text-sm mb-3">{{ errorMessage }}</p>
+        <button (click)="loadAttacks()" class="px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg uppercase tracking-widest">Retry</button>
+      </div>
+
       <!-- Table Section -->
-      <div class="bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden shadow-2xl">
+      <div *ngIf="!isLoading && !errorMessage" class="bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden shadow-2xl">
         <div class="overflow-x-auto">
           <table class="w-full text-left">
             <thead class="bg-neutral-800/50 text-neutral-400 text-[10px] uppercase tracking-widest font-black">
@@ -68,7 +78,7 @@ import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
               </tr>
             </thead>
             <tbody class="divide-y divide-neutral-800/50 text-sm">
-              <tr *ngFor="let attack of pagedAttacks" class="hover:bg-neutral-800/30 transition-all group">
+              <tr *ngFor="let attack of attacks" class="hover:bg-neutral-800/30 transition-all group">
                 <td class="px-6 py-4 font-mono text-neutral-500 group-hover:text-primary transition-colors text-xs">
                   {{ attack.id }}
                 </td>
@@ -91,7 +101,7 @@ import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
                   </span>
                 </td>
                 <td class="px-6 py-4 text-neutral-500 text-xs tabular-nums">
-                  {{ attack.timestamp | date:'yyyy-MM-dd HH:mm:ss' }}
+                  {{ attack.created_at || attack.timestamp }}
                 </td>
                 <td class="px-6 py-4 text-right">
                   <button [routerLink]="['/attacks', attack.id]" 
@@ -102,7 +112,7 @@ import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
               </tr>
 
               <!-- Empty State -->
-              <tr *ngIf="pagedAttacks.length === 0">
+              <tr *ngIf="attacks.length === 0">
                 <td colspan="7" class="px-6 py-20 text-center">
                   <div class="flex flex-col items-center gap-3">
                     <span class="text-4xl opacity-20">🛡️</span>
@@ -118,7 +128,7 @@ import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
         <!-- Pagination Footer -->
         <div class="bg-neutral-900 border-t border-neutral-800 p-4 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div class="text-xs text-neutral-500 font-medium">
-            Showing <span class="text-white">{{ getStartIndex() + 1 }}</span> to <span class="text-white">{{ getEndIndex() }}</span> of <span class="text-white">{{ filteredCount }}</span> logs
+            Showing <span class="text-white">{{ getStartIndex() + 1 }}</span> to <span class="text-white">{{ getEndIndex() }}</span> of <span class="text-white">{{ totalRecords }}</span> logs
           </div>
           <div class="flex gap-2">
             <button (click)="prevPage()" 
@@ -127,7 +137,7 @@ import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
               Previous
             </button>
             <div class="flex items-center gap-1 px-4 text-xs font-mono text-neutral-400">
-               Page {{ currentPage }}
+               Page {{ currentPage }} of {{ totalPages }}
             </div>
             <button (click)="nextPage()" 
                     [disabled]="currentPage >= totalPages"
@@ -155,8 +165,8 @@ import { Observable, combineLatest, map, BehaviorSubject } from 'rxjs';
 })
 export class AttacksListPage implements OnInit {
   attacks: Attack[] = [];
-  filteredAttacks: Attack[] = [];
-  pagedAttacks: Attack[] = [];
+  isLoading = false;
+  errorMessage = '';
 
   filters: AttackFilters = {
     search: '',
@@ -166,44 +176,46 @@ export class AttacksListPage implements OnInit {
 
   pageSize = 10;
   currentPage = 1;
-  filteredCount = 0;
+  totalRecords = 0;
   totalPages = 1;
+
+  private debounceTimer: any;
 
   constructor(private attackService: AttackService) {}
 
   ngOnInit(): void {
-    this.attackService.getAttacks().subscribe(data => {
-      this.attacks = data;
-      this.applyFilters();
-    });
+    this.loadAttacks();
   }
 
   onFilterChange() {
-    this.currentPage = 1; // Reset to first page
-    this.applyFilters();
+    this.currentPage = 1;
+    // Debounce search input to avoid excessive API calls
+    clearTimeout(this.debounceTimer);
+    this.debounceTimer = setTimeout(() => {
+      this.loadAttacks();
+    }, 300);
   }
 
-  applyFilters() {
-    this.filteredAttacks = this.attacks.filter(a => {
-      const matchesSearch = !this.filters.search || 
-        a.ip.toLowerCase().includes(this.filters.search.toLowerCase()) ||
-        a.type.toLowerCase().includes(this.filters.search.toLowerCase());
-      
-      const matchesSeverity = !this.filters.severity || a.severity === this.filters.severity;
-      const matchesStatus = !this.filters.status || a.status === this.filters.status;
+  loadAttacks() {
+    this.isLoading = true;
+    this.errorMessage = '';
 
-      return matchesSearch && matchesSeverity && matchesStatus;
+    this.attackService.getAttacks(this.currentPage, this.pageSize, {
+      severity: this.filters.severity,
+      status: this.filters.status,
+      search: this.filters.search
+    }).subscribe({
+      next: (result) => {
+        this.attacks = result.attacks;
+        this.totalRecords = result.pagination.total;
+        this.totalPages = result.pagination.total_pages;
+        this.isLoading = false;
+      },
+      error: () => {
+        this.errorMessage = 'Failed to load attacks. Please try again.';
+        this.isLoading = false;
+      }
     });
-
-    this.filteredCount = this.filteredAttacks.length;
-    this.totalPages = Math.ceil(this.filteredCount / this.pageSize);
-    this.updatePagedData();
-  }
-
-  updatePagedData() {
-    const start = this.getStartIndex();
-    const end = this.getEndIndex();
-    this.pagedAttacks = this.filteredAttacks.slice(start, end);
   }
 
   getStartIndex() {
@@ -211,26 +223,27 @@ export class AttacksListPage implements OnInit {
   }
 
   getEndIndex() {
-    return Math.min(this.currentPage * this.pageSize, this.filteredCount);
+    return Math.min(this.currentPage * this.pageSize, this.totalRecords);
   }
 
   prevPage() {
     if (this.currentPage > 1) {
       this.currentPage--;
-      this.updatePagedData();
+      this.loadAttacks();
     }
   }
 
   nextPage() {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
-      this.updatePagedData();
+      this.loadAttacks();
     }
   }
 
   resetFilters() {
     this.filters = { search: '', severity: '', status: '' };
-    this.onFilterChange();
+    this.currentPage = 1;
+    this.loadAttacks();
   }
 
   getSeverityClasses(severity: string) {

@@ -2,7 +2,7 @@ export type Severity = 'low' | 'medium' | 'high';
 export type AttackStatus = 'active' | 'resolved' | 'mitigated';
 
 export interface Attack {
-  id: string;
+  id: number;
   type: string;
   severity: Severity;
   ip: string;
@@ -15,6 +15,7 @@ export interface Attack {
     timestamp: string;
     description: string;
   }[];
+  created_at?: string;
 }
 
 export interface AttackFilters {

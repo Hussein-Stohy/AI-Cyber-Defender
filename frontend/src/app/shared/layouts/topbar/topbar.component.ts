@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../core/services/auth.service';
 
@@ -48,23 +48,36 @@ import { AuthService } from '../../../core/services/auth.service';
         </button>
 
         <!-- User Profile -->
-        <div class="flex items-center gap-3 pl-6 border-l border-neutral-800">
+        <div class="flex items-center gap-3 pl-6 border-l border-neutral-800" *ngIf="user">
           <div class="text-right hidden sm:block">
-            <p class="text-sm font-semibold text-white">Hussein Stohy</p>
-            <p class="text-[10px] text-neutral-500 uppercase tracking-widest font-bold">Security Lead</p>
+            <p class="text-sm font-semibold text-white">{{ user.name }}</p>
+            <p class="text-[10px] text-neutral-500 uppercase tracking-widest font-bold">Analyst</p>
           </div>
           <div class="w-10 h-10 rounded-full bg-neutral-800 border border-neutral-700 p-0.5">
-             <div class="w-full h-full rounded-full bg-primary flex items-center justify-center text-white font-bold">HS</div>
+             <div class="w-full h-full rounded-full bg-primary flex items-center justify-center text-white font-bold">
+               {{ getInitials(user.name) }}
+             </div>
           </div>
         </div>
       </div>
     </header>
   `
 })
-export class TopbarComponent {
+export class TopbarComponent implements OnInit {
+  user: any = null;
+
   constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    this.user = this.authService.getCurrentUser();
+  }
 
   logout() {
     this.authService.logout();
+  }
+
+  getInitials(name: string): string {
+    if (!name) return '??';
+    return name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
   }
 }
