@@ -89,12 +89,12 @@ import { Observable, switchMap, catchError, of } from 'rxjs';
           <section class="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden flex flex-col">
             <div class="px-6 py-4 border-b border-neutral-800 bg-neutral-800/20 flex justify-between items-center">
                <h3 class="text-sm font-black text-white uppercase tracking-widest">Forensic Raw Logs</h3>
-               <span class="text-[10px] text-neutral-500 font-mono">ENCRYPTED STREAM</span>
+               <span class="text-[10px] text-neutral-500 font-mono uppercase tracking-widest">RAW FORENSIC STREAM</span>
             </div>
             <div class="p-6 bg-black/40 font-mono text-sm overflow-x-auto max-h-80 custom-scrollbar">
               <div *ngFor="let log of attack.logs" class="py-1 flex gap-4 group">
                  <span class="text-neutral-700 select-none group-hover:text-primary transition-colors">></span>
-                 <span class="text-neutral-400 whitespace-nowrap">{{ log }}</span>
+                 <span class="text-neutral-400 whitespace-pre-wrap break-words">{{ log }}</span>
               </div>
               <div *ngIf="!attack.logs || attack.logs.length === 0" class="py-4 text-neutral-600 italic">
                  No raw logs captured for this incident.

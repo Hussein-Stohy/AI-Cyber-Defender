@@ -19,19 +19,23 @@ CREATE TABLE IF NOT EXISTS `tokens` (
 
 CREATE TABLE IF NOT EXISTS `attacks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `type` varchar(100) DEFAULT NULL,
-  `severity` varchar(50) DEFAULT NULL,
-  `ip` varchar(45) DEFAULT NULL,
-  `timestamp` varchar(100) DEFAULT NULL,
-  `confidence` decimal(5,2) DEFAULT NULL,
-  `explanation` text,
+  `source_type` varchar(50) DEFAULT NULL,
+  `attack_type` varchar(100) DEFAULT NULL,
+  `attack_name` varchar(150) DEFAULT NULL,
+  `threat_score` decimal(5,2) DEFAULT NULL,
+  `threat_level` varchar(50) DEFAULT NULL,
+  `source_ip` varchar(45) DEFAULT NULL,
+  `username` varchar(100) DEFAULT NULL,
+  `event_time` varchar(100) DEFAULT NULL,
+  `recommended_actions` text,
+  `raw_context` text,
   `status` varchar(50) DEFAULT 'active',
   `created_at` timestamp DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  INDEX (`severity`),
+  INDEX (`threat_level`),
   INDEX (`status`),
-  INDEX (`ip`),
-  INDEX (`type`)
+  INDEX (`source_ip`),
+  INDEX (`attack_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `attack_logs` (

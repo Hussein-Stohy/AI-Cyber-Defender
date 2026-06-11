@@ -102,10 +102,18 @@ import { Observable, catchError, of } from 'rxjs';
             <svg viewBox="0 0 100 100" class="w-48 h-48 -rotate-90">
                <!-- Background circle -->
                <circle cx="50" cy="50" r="40" stroke="#1f1f1f" stroke-width="12" fill="none" />
-               <!-- Values mapping -->
-               <circle cx="50" cy="50" r="40" stroke="#0C8495" stroke-width="12" fill="none" stroke-dasharray="125 251" />
-               <circle cx="50" cy="50" r="40" stroke="#ef4444" stroke-width="12" fill="none" stroke-dasharray="35 251" stroke-dashoffset="-125" />
-               <circle cx="50" cy="50" r="40" stroke="#f59e0b" stroke-width="12" fill="none" stroke-dasharray="91 251" stroke-dashoffset="-160" />
+               <ng-container *ngFor="let segment of donutSegments">
+                 <circle
+                   cx="50"
+                   cy="50"
+                   r="40"
+                   [attr.stroke]="segment.color"
+                   stroke-width="12"
+                   fill="none"
+                   [attr.stroke-dasharray]="segment.dasharray"
+                   [attr.stroke-dashoffset]="segment.dashoffset"
+                 />
+               </ng-container>
             </svg>
             <div class="absolute flex flex-col items-center">
               <span class="text-3xl font-black text-white">100%</span>
@@ -169,6 +177,7 @@ export class DashboardPage implements OnInit {
   points: {x: number, y: number}[] = [];
   linePathBorder: string = '';
   linePathArea: string = '';
+  donutSegments: { color: string; dasharray: string; dashoffset: string; }[] = [];
   isLoading = true;
   errorMessage = '';
 
@@ -192,6 +201,7 @@ export class DashboardPage implements OnInit {
       this.isLoading = false;
       if (data) {
         this.calculatePaths(data.trends);
+        this.calculateDonut(data.distributions);
       }
     });
   }
@@ -203,10 +213,17 @@ export class DashboardPage implements OnInit {
   private calculatePaths(trends: any[]) {
     const width = 700;
     const height = 200;
-    const maxVal = Math.max(...trends.map(t => t.value));
-    
+    if (!trends || trends.length === 0) {
+      this.points = [];
+      this.linePathBorder = '';
+      this.linePathArea = '';
+      return;
+    }
+
+    const maxVal = Math.max(...trends.map(t => t.value), 1);
+    const count = trends.length;
     this.points = trends.map((t, i) => {
-      const x = (i / (trends.length - 1)) * width;
+      const x = count === 1 ? width / 2 : (i / (count - 1)) * width;
       const y = height - (t.value / maxVal) * (height - 40) - 20;
       return { x, y };
     });
@@ -214,9 +231,36 @@ export class DashboardPage implements OnInit {
     const borderPath = this.points.reduce((acc, point, i) => {
       return i === 0 ? `M ${point.x} ${point.y}` : `${acc} L ${point.x} ${point.y}`;
     }, '');
-    
+
     this.linePathBorder = borderPath;
-    this.linePathArea = `${borderPath} L ${width} ${height} L 0 ${height} Z`;
+    this.linePathArea = `${borderPath} L ${this.points[this.points.length - 1].x} ${height} L ${this.points[0].x} ${height} Z`;
+  }
+
+  private calculateDonut(distributions: any[]) {
+    const total = distributions.reduce((sum, item) => sum + Number(item.value), 0);
+    const circumference = 251;
+    let offset = 0;
+
+    this.donutSegments = distributions.map(item => {
+      const percentage = total > 0 ? Number(item.value) : 0;
+      const length = (percentage / 100) * circumference;
+      const segment = {
+        color: this.getSeverityColor(item.label),
+        dasharray: `${length} ${circumference - length}`,
+        dashoffset: `${-offset}`
+      };
+      offset += length;
+      return segment;
+    });
+  }
+
+  private getSeverityColor(label: string): string {
+    switch (label.toLowerCase()) {
+      case 'high': return '#ef4444';
+      case 'medium': return '#f59e0b';
+      case 'low': return '#0C8495';
+      default: return '#38bdf8';
+    }
   }
 
   getBadgeClasses(severity: string) {

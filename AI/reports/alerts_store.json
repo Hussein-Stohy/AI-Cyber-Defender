@@ -8182,5 +8182,3756 @@
       "source_ip": "45.67.89.10",
       "username": null
     }
+  },
+  {
+    "generated_at": "2026-04-21T14:27:45.928972+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T14:27:45.928972Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T14:27:55.613325+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T14:27:55.613325Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T14:35:25.098637+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T14:35:25.098637Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T14:42:34.627875+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T14:42:34.627875Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test login attempt OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T14:46:02.894926+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T14:46:02.894926Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack 1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T14:46:09.035133+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T14:46:09.035133Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack 1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T14:51:11.537070+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T14:51:11.537070Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:15:18.335162+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:15:18.335162Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:15:19.398508+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:15:19.398508Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:15:20.253410+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:15:20.253410Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:15:21.026268+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:15:21.026268Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:32:21.161416+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:32:21.161416Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:32:48.223306+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:32:48.223306Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:33:45.521352+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:33:45.521352Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:39:34.405846+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:39:34.405846Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:40:31.321647+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:40:31.321647Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:40:43.288314+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:40:43.288314Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:40:47.111744+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:40:47.111744Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T15:42:27.450783+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T15:42:27.450783Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:06:11.158732+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:06:11.158732Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:13:54.809435+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:13:54.809435Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:14:32.606460+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:14:32.606460Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:28:50.362971+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:28:50.362971Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:29:07.075544+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:29:07.075544Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:34:35.886654+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:34:35.886654Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:36:12.091442+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:36:12.091442Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:38:17.591598+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:38:17.591598Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:38:59.656107+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:38:59.656107Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:41:30.360525+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:41:30.360525Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T16:45:02.131617+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T16:45:02.131617Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:20:29.006611+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T17:20:29.006611Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:29:47.400267+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T17:29:47.400267Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "SELECT * FROM users WHERE 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:31:39.405472+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T17:31:39.405472Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "SELECT * FROM users WHERE 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:39:26.075903+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T17:39:26.075903Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "ي",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:39:41.659659+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T17:39:41.659659Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "لال",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:39:48.330773+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T17:39:48.330773Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:39:52.488763+00:00",
+    "source_type": "network",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": null,
+    "event_time": "2026-04-21T17:39:52.488763Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Rate-limit or block the source IP.",
+        "Inspect firewall and IDS/IPS telemetry.",
+        "Escalate if attack volume increases."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.1.20",
+      "username": null
+    }
+  },
+  {
+    "generated_at": "2026-04-21T17:51:55.859043+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T17:51:55.859043Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "SELECT * FROM users WHERE 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T18:04:01.175863+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T18:04:01.175863Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T18:06:02.625543+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T18:06:02.625543Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T18:06:03.921340+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T18:06:03.921340Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T21:53:03.871154+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T21:53:03.871154Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T21:53:13.080431+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T21:53:13.080431Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T21:54:37.491034+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T21:54:37.490038Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "DROP TABLE users",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T21:54:48.516224+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T21:54:48.516224Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "DROP TABLE users",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T21:54:57.600562+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T21:54:57.600562Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "DROP TABLE users",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T21:57:01.687186+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T21:57:01.687186Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "DROP TABLE users",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T21:58:15.564891+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T21:58:15.564891Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:00:51.878133+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:00:51.878133Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:00:58.891273+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:00:58.891273Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:11:29.159792+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:11:29.159792Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:11:34.636799+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:11:34.636799Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:11:40.710648+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:11:40.710648Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:25.101606+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:25.101606Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:28.733693+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:28.733693Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:35.528421+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:35.528421Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:51.509389+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:51.509389Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:51.865280+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:51.865280Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:52.080860+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:52.080860Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:52.419473+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:52.418464Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:53.915433+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:53.915433Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:54.081321+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:54.081321Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:54.297158+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:54.297158Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:54.892512+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:54.892512Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:58.166713+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:58.166713Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:58.507407+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:58.507407Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:15:59.291414+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:15:59.291414Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:16:21.722456+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:16:21.722456Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:16:22.067283+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:16:22.067283Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:16:26.395853+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:16:26.395853Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:16:31.698379+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:16:31.698379Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:16:32.601382+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:16:32.601382Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:16:32.953887+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:16:32.953887Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:16:33.177096+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:16:33.177096Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "admin' OR 1=1 --",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:17:37.924967+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:17:37.924967Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-21T22:20:10.037232+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-21T22:20:10.037232Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T20:34:57.202271+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T20:34:57.202271Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T20:36:07.392870+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T20:36:07.392870Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T20:45:04.524072+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T20:45:04.524072Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T20:48:22.328702+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T20:48:22.328211Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T20:48:55.850249+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T20:48:55.850249Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:00:36.013004+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T21:00:36.013004Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:00:38.683305+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-23T21:00:38.683305Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:09:43.233741+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-23T21:09:43.233741Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:10:10.616306+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-23T21:10:10.616306Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:10:15.778986+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-23T21:10:15.778986Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:10:24.398072+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T21:10:24.398072Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:10:26.899205+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T21:10:26.899205Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:17:58.471117+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-23T21:17:58.471117Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:24:07.973837+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-23T21:24:07.973837Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:38:29.979191+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-04-23T21:38:29.979191Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test attack OR 1=1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:45:45.128342+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T21:45:45.128342Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:45:55.437528+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T21:45:55.437528Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-23T21:51:47.887410+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-23T21:51:47.886418Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--",
+      "query": "username=admin' OR 1=1--",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T13:54:49.023860+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-04-25T13:54:49.023860Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 EventID=4624 Login success User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T13:54:49.252862+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "admin",
+    "event_time": "2026-04-25T13:54:49.252862Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 EventID=4625 Failed login User=admin SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "admin"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T13:54:49.472304+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T13:54:49.472304Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1-- HTTP/1.1",
+      "query": "username=admin' OR 1=1-- HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T13:56:20.425633+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-04-25T13:56:20.425633Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 EventID=4624 Login success User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T13:56:20.646348+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "admin",
+    "event_time": "2026-04-25T13:56:20.646348Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 EventID=4625 Failed login User=admin SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "admin"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T13:56:20.866499+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T13:56:20.866499Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1-- HTTP/1.1",
+      "query": "username=admin' OR 1=1-- HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:06:48.241406+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-04-25T14:06:48.241406Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 EventID=4624 Login success User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:06:48.461038+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "admin",
+    "event_time": "2026-04-25T14:06:48.461038Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 EventID=4625 Failed login User=admin SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "admin"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:06:48.680693+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:06:48.680693Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1-- HTTP/1.1",
+      "query": "username=admin' OR 1=1-- HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:10:48.653590+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:10:48.653590Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:14:53.400661+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:14:53.400661Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:16:05.068705+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:16:05.068705Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:16:17.769230+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:16:17.769230Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:30:12.485311+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:30:12.485311Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:33:43.473158+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:33:43.473158Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:41:22.064312+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:41:22.064312Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:52:53.946576+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-04-25T14:52:53.946576Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 09:14:02 Security EventID=4624 An account was successfully logged on User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:53:46.248816+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 90.0,
+    "threat_level": "critical",
+    "attack_type": "Privilege Enumeration",
+    "attack_name": "Windows Privilege Enumeration",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-04-25T14:53:46.248816Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4799,
+      "task_category": "2024-04-17 03:17:08 Security EventID=4799 A security-enabled local group membership was enumerated User=Administrator SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:54:12.213951+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:54:12.213951Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T14:54:49.351295+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T14:54:49.351295Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-04-25T15:12:14.663321+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-04-25T15:12:14.663321Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:03:17.080368+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-06-11T17:03:17.079688Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 09:14:02 Security EventID=4624 An account was successfully logged on User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:22:29.014845+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.0.5",
+    "username": null,
+    "event_time": "2026-06-11T17:22:29.014016Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.0.5",
+      "username": null,
+      "url": "Suspicious login attempt from 192.168.0.5",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:23:46.273515+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.0.5",
+    "username": null,
+    "event_time": "2026-06-11T17:23:46.273365Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.0.5",
+      "username": null,
+      "url": "Suspicious login attempt from 192.168.0.5",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:03.675997+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-06-11T17:29:03.675914Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 09:14:02 Security EventID=4624 An account was successfully logged on User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:06.651820+00:00",
+    "source_type": "network",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": null,
+    "event_time": "2026-06-11T17:29:06.651741Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Rate-limit or block the source IP.",
+        "Inspect firewall and IDS/IPS telemetry.",
+        "Escalate if attack volume increases."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.1.20",
+      "username": null
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:07.323673+00:00",
+    "source_type": "network",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": null,
+    "event_time": "2026-06-11T17:29:07.323592Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Rate-limit or block the source IP.",
+        "Inspect firewall and IDS/IPS telemetry.",
+        "Escalate if attack volume increases."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.1.20",
+      "username": null
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:08.395604+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:29:08.395464Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:08.979486+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:29:08.979403Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:09.411540+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:29:09.411457Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:09.563433+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:29:09.563338Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:09.715420+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:29:09.715304Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:29:09.859317+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:29:09.859233Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:35:34.850075+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.0.5",
+    "username": null,
+    "event_time": "2026-06-11T17:35:34.849992Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.0.5",
+      "username": null,
+      "url": "Suspicious login attempt from 192.168.0.5",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:39:13.641797+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:39:13.641711Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test connection to AI",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-11T17:39:27.254587+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-11T17:39:27.254503Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "test connection to AI",
+      "query": "",
+      "body": ""
+    }
   }
 ]

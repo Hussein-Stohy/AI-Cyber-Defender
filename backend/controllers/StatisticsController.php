@@ -15,26 +15,26 @@ class StatisticsController {
 
     public function index(Request $request) {
         $stmtIps = $this->conn->query("
-            SELECT ip, COUNT(*) as count 
+            SELECT source_ip as ip, COUNT(*) as count 
             FROM attacks 
-            WHERE ip IS NOT NULL AND ip != '' 
-            GROUP BY ip 
+            WHERE source_ip IS NOT NULL AND source_ip != '' 
+            GROUP BY source_ip 
             ORDER BY count DESC LIMIT 5
         ");
         $topIps = $stmtIps->fetchAll();
 
         $stmtTypes = $this->conn->query("
-            SELECT type, COUNT(*) as count 
+            SELECT attack_type as type, COUNT(*) as count 
             FROM attacks 
-            GROUP BY type 
+            GROUP BY attack_type 
             ORDER BY count DESC
         ");
         $attackTypes = $stmtTypes->fetchAll();
 
         $stmtTrends = $this->conn->query("
-            SELECT DATE(created_at) as date, COUNT(*) as count 
+            SELECT DATE(COALESCE(NULLIF(event_time, ''), created_at)) as date, COUNT(*) as count 
             FROM attacks 
-            GROUP BY DATE(created_at) 
+            GROUP BY DATE(COALESCE(NULLIF(event_time, ''), created_at)) 
             ORDER BY date DESC LIMIT 30
         ");
         $dailyTrends = $stmtTrends->fetchAll();

@@ -13,19 +13,23 @@ class Attack {
 
     public function create($data) {
         $stmt = $this->conn->prepare("
-            INSERT INTO attacks (type, severity, ip, timestamp, confidence, explanation, status) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO attacks (source_type, attack_type, attack_name, threat_score, threat_level, source_ip, username, event_time, recommended_actions, raw_context, status) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ");
         
-        $type = $data['type'] ?? 'unknown';
-        $severity = $data['severity'] ?? 'low';
-        $ip = $data['ip'] ?? null;
-        $timestamp = $data['timestamp'] ?? date('Y-m-d H:i:s');
-        $confidence = $data['confidence'] ?? 0;
-        $explanation = $data['explanation'] ?? null;
+        $source_type = $data['source_type'] ?? null;
+        $attack_type = $data['attack_type'] ?? 'unknown';
+        $attack_name = $data['attack_name'] ?? 'unknown';
+        $threat_score = $data['threat_score'] ?? 0;
+        $threat_level = $data['threat_level'] ?? 'low';
+        $source_ip = $data['source_ip'] ?? null;
+        $username = $data['username'] ?? null;
+        $event_time = $data['event_time'] ?? date('Y-m-d H:i:s');
+        $recommended_actions = $data['recommended_actions'] ?? null;
+        $raw_context = $data['raw_context'] ?? null;
         $status = 'active';
 
-        $stmt->execute([$type, $severity, $ip, $timestamp, $confidence, $explanation, $status]);
+        $stmt->execute([$source_type, $attack_type, $attack_name, $threat_score, $threat_level, $source_ip, $username, $event_time, $recommended_actions, $raw_context, $status]);
         return $this->conn->lastInsertId();
     }
 
@@ -39,20 +43,33 @@ class Attack {
         return $stmt->execute([$attackId, $timestamp, $description]);
     }
 
+    private function mapAttackRow(array $attack): array {
+        $mapped = $attack;
+
+        $mapped['type'] = $attack['attack_type'] ?? $attack['attack_name'] ?? 'unknown';
+        $mapped['severity'] = $attack['threat_level'] ?? 'low';
+        $mapped['ip'] = $attack['source_ip'] ?? '';
+        $mapped['timestamp'] = $attack['event_time'] ?? $attack['created_at'] ?? '';
+        $mapped['confidence'] = isset($attack['threat_score']) ? min(max(floatval($attack['threat_score']) / 100, 0), 1) : 0;
+        $mapped['explanation'] = $attack['recommended_actions'] ?? null;
+
+        return $mapped;
+    }
+
     public function getAll($page = 1, $limit = 10, $filters = []) {
         $offset = ($page - 1) * $limit;
         
         $query = "SELECT * FROM attacks WHERE 1=1";
         $params = [];
 
-        if (!empty($filters['severity'])) {
-            $query .= " AND severity = ?";
-            $params[] = $filters['severity'];
+        if (!empty($filters['threat_level'])) {
+            $query .= " AND threat_level = ?";
+            $params[] = $filters['threat_level'];
         }
         
-        if (!empty($filters['type'])) {
-            $query .= " AND type LIKE ?";
-            $params[] = "%" . $filters['type'] . "%";
+        if (!empty($filters['attack_type'])) {
+            $query .= " AND attack_type LIKE ?";
+            $params[] = "%" . $filters['attack_type'] . "%";
         }
         
         if (!empty($filters['status'])) {
@@ -60,9 +77,9 @@ class Attack {
             $params[] = $filters['status'];
         }
         
-        if (!empty($filters['ip'])) {
-            $query .= " AND ip LIKE ?";
-            $params[] = "%" . $filters['ip'] . "%";
+        if (!empty($filters['source_ip'])) {
+            $query .= " AND source_ip LIKE ?";
+            $params[] = "%" . $filters['source_ip'] . "%";
         }
 
         // Count total
@@ -79,7 +96,7 @@ class Attack {
         
         $stmt = $this->conn->prepare($query);
         $stmt->execute($params);
-        $data = $stmt->fetchAll();
+        $data = array_map([$this, 'mapAttackRow'], $stmt->fetchAll());
 
         return [
             'data' => $data,
@@ -96,6 +113,8 @@ class Attack {
         $attack = $stmt->fetch();
 
         if ($attack) {
+            $attack = $this->mapAttackRow($attack);
+
             // Get logs
             $logsStmt = $this->conn->prepare("SELECT log_text FROM attack_logs WHERE attack_id = ?");
             $logsStmt->execute([$id]);
@@ -123,8 +142,8 @@ class Attack {
     public function getRecent($limit = 10) {
         // Need to turn off emulate prepares or bind limit explicitly
         $this->conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-        $stmt = $this->conn->prepare("SELECT * FROM attacks ORDER BY timestamp DESC, id DESC LIMIT ?");
+        $stmt = $this->conn->prepare("SELECT * FROM attacks ORDER BY created_at DESC, id DESC LIMIT ?");
         $stmt->execute([$limit]);
-        return $stmt->fetchAll();
+        return array_map([$this, 'mapAttackRow'], $stmt->fetchAll());
     }
 }

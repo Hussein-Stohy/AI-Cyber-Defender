@@ -101,6 +101,38 @@ async function latestAlerts(){
   document.getElementById('alertsOut').textContent=JSON.stringify(data,null,2);
 }
 latestAlerts();
+async function loadLogs() {
+    try {
+        let res = await fetch("http://127.0.0.1:5000/api/predict", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                input_text: "test attack OR 1=1"
+            })
+        });
+
+        let data = await res.json();
+
+        document.getElementById("logs").innerHTML = `
+            <div style="padding:10px;background:#1e293b;border-radius:8px">
+                <b>${data.prediction}</b><br>
+                Type: ${data.attack_type}<br>
+                Score: ${data.threat_score}<br>
+                <small>${data.event_time}</small>
+            </div>
+        `;
+    } catch (err) {
+        document.getElementById("logs").innerHTML =
+            "<span style='color:red'>Error connecting to API</span>";
+        console.log(err);
+    }
+}
+
+// تشغيل أول مرة
+loadLogs();
+
+// تحديث كل 5 ثواني
+setInterval(loadLogs, 5000);
 </script>
 </body>
 </html>

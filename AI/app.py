@@ -1,3 +1,4 @@
+import time
 import os
 import sys
 import json
@@ -9,7 +10,18 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
+
+# Try to import TensorFlow, but don't fail if it's not available
+try:
+    from tensorflow.keras.models import load_model
+    TENSORFLOW_AVAILABLE = True
+except ImportError:
+    TENSORFLOW_AVAILABLE = False
+    def load_model(path):
+        """Fallback function when TensorFlow is not available"""
+        print(f"Warning: TensorFlow not available, skipping model loading for {path}")
+        return None
+
 from flask import Flask, render_template_string, request, jsonify, send_from_directory
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -779,22 +791,31 @@ def index():
 def api_info():
     return jsonify({"demo_mode": False, "version": "3.0-hybrid"})
 
-
 @app.route("/api/predict", methods=["POST"])
 def api_predict():
     data = request.get_json(silent=True) or {}
     input_text = data.get("input_text", "").strip()
 
     if not input_text:
-        return jsonify({"error": "Missing 'input_text' field"}), 400
+        return jsonify({"error": "Missing input_text"}), 400
 
     try:
-        result = single_log_rule_detection(input_text)
-        append_alerts([result], str(ALERT_STORE_PATH))
-        return jsonify(result)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        start = time.time()
 
+        # 🔥 LOG قبل التنفيذ
+        print("🚀 Incoming request:", input_text)
+
+        result = single_log_rule_detection(input_text)
+
+        print("✅ Done in:", time.time() - start, "sec")
+
+        append_alerts([result], str(ALERT_STORE_PATH))
+
+        return jsonify(result)
+
+    except Exception as e:
+        print("❌ ERROR:", str(e))
+        return jsonify({"error": str(e)}), 500
 
 @app.route("/api/batch", methods=["POST"])
 def api_batch():

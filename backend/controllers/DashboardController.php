@@ -24,7 +24,7 @@ class DashboardController {
         $stmt = $this->conn->query("
             SELECT 
                 COUNT(*) as total,
-                SUM(CASE WHEN severity = 'high' THEN 1 ELSE 0 END) as high,
+                SUM(CASE WHEN threat_level = 'high' THEN 1 ELSE 0 END) as high,
                 SUM(CASE WHEN status = 'active' THEN 1 ELSE 0 END) as active,
                 SUM(CASE WHEN status = 'resolved' THEN 1 ELSE 0 END) as resolved
             FROM attacks
@@ -42,17 +42,18 @@ class DashboardController {
 
     public function charts(Request $request) {
         $stmtOverTime = $this->conn->query("
-            SELECT DATE(created_at) as date, COUNT(*) as count 
+            SELECT DATE(event_time) as date, COUNT(*) as count 
             FROM attacks 
-            GROUP BY DATE(created_at) 
+            WHERE event_time IS NOT NULL AND event_time != ''
+            GROUP BY DATE(event_time) 
             ORDER BY date DESC LIMIT 7
         ");
-        $attacksOverTime = $stmtOverTime->fetchAll();
+        $attacksOverTime = array_reverse($stmtOverTime->fetchAll());
 
         $stmtSeverity = $this->conn->query("
-            SELECT severity, COUNT(*) as count 
+            SELECT threat_level as severity, COUNT(*) as count 
             FROM attacks 
-            GROUP BY severity
+            GROUP BY threat_level
         ");
         $severityDistribution = $stmtSeverity->fetchAll();
 

@@ -116,7 +116,7 @@
       "name": "2. AI Integration",
       "item": [
         {
-          "name": "Receive AI Attack Results",
+          "name": "Analyze Log (New AI)",
           "request": {
             "method": "POST",
             "header": [
@@ -127,12 +127,12 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"type\": \"SQL Injection\",\n    \"severity\": \"high\",\n    \"ip\": \"192.168.1.100\",\n    \"confidence\": 0.95,\n    \"explanation\": \"Detected unusual union select pattern indicating potential SQLi.\",\n    \"logs\": [\n        \"Attempted SELECT * FROM users\",\n        \"UNION applied on primary query\"\n    ],\n    \"timeline\": [\n        { \"timestamp\": \"2026-04-24 12:00:00\", \"description\": \"Connection opened from suspicious IP\" },\n        { \"timestamp\": \"2026-04-24 12:00:05\", \"description\": \"Malicious payload sent\" }\n    ]\n}"
+              "raw": "{\n    \"input_text\": \"GET /login?username=admin' OR 1=1--&password=x HTTP/1.1\"\n}"
             },
             "url": {
-              "raw": "{{base_url}}/api/ai/results",
+              "raw": "{{base_url}}/api/ai/analyze",
               "host": ["{{base_url}}"],
-              "path": ["api", "ai", "results"]
+              "path": ["api", "ai", "analyze"]
             }
           }
         }
@@ -295,6 +295,62 @@
               "raw": "{{base_url}}/api/statistics",
               "host": ["{{base_url}}"],
               "path": ["api", "statistics"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Reports",
+      "item": [
+        {
+          "name": "Generate Daily Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/reports/daily",
+              "host": ["{{base_url}}"],
+              "path": ["api", "reports", "daily"]
+            }
+          }
+        },
+        {
+          "name": "Generate Weekly Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/reports/weekly",
+              "host": ["{{base_url}}"],
+              "path": ["api", "reports", "weekly"]
+            }
+          }
+        },
+        {
+          "name": "Generate Monthly Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/reports/monthly",
+              "host": ["{{base_url}}"],
+              "path": ["api", "reports", "monthly"]
             }
           }
         }

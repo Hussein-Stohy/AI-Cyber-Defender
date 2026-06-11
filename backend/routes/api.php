@@ -25,6 +25,9 @@ $router->get('/api/dashboard/charts', ['Controllers\DashboardController', 'chart
 $router->get('/api/statistics', ['Controllers\StatisticsController', 'index'], [AuthMiddleware::class]);
 
 // AI Integration
-$router->post('/api/ai/results', ['Controllers\AiController', 'storeResult']); // Unprotected
+$router->post('/api/ai/analyze', ['Controllers\AiController', 'analyzeLog']); // Unprotected
+
+// Reports
+$router->get('/api/reports/{period}', ['Controllers\ReportController', 'generate'], [AuthMiddleware::class]);
 
 return $router;

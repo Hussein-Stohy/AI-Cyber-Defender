@@ -11,6 +11,7 @@ export interface Attack {
   confidence?: number;
   explanation?: string;
   logs?: string[];
+  raw_context?: string;
   timeline?: {
     timestamp: string;
     description: string;
