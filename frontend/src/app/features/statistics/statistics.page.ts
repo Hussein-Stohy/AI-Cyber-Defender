@@ -39,7 +39,7 @@ import { StatisticsData } from '../../core/models/api-response.model';
             <div *ngFor="let item of stats.topIps; let i = index" class="px-6 py-4 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
               <div class="flex items-center gap-4">
                 <span class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-xs font-black text-neutral-400">{{ i + 1 }}</span>
-                <span class="font-mono text-white font-bold tracking-wider">{{ item.ip }}</span>
+                <span class="font-mono text-white font-bold tracking-wider">{{ formatIP(item.ip) }}</span>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-32 h-2 bg-neutral-800 rounded-full overflow-hidden">
@@ -98,10 +98,11 @@ import { StatisticsData } from '../../core/models/api-response.model';
                   </div>
                 </div>
               </div>
-              <!-- Date labels (show first and last) -->
+              <!-- Date labels -->
               <div class="flex justify-between mt-3 text-[10px] text-neutral-500 font-mono" *ngIf="stats.dailyTrends.length > 0">
-                <span>{{ stats.dailyTrends[0].date }}</span>
-                <span>{{ stats.dailyTrends[stats.dailyTrends.length - 1].date }}</span>
+                <span>{{ formatDate(stats.dailyTrends[0].date) }}</span>
+                <span *ngIf="stats.dailyTrends.length > 4">{{ formatDate(stats.dailyTrends[Math.floor(stats.dailyTrends.length / 2)].date) }}</span>
+                <span>{{ formatDate(stats.dailyTrends[stats.dailyTrends.length - 1].date) }}</span>
               </div>
               <div *ngIf="stats.dailyTrends.length === 0" class="h-48 flex items-center justify-center text-neutral-600 italic">
                 No trend data available.
@@ -164,4 +165,20 @@ export class StatisticsPage implements OnInit {
     if (max === 0) return 5;
     return Math.max(5, Math.round((Number(count) / max) * 100));
   }
+
+  formatIP(ip: string): string {
+    if (!ip || ip === 'N/A' || ip === 'unknown' || ip === 'SMS') return 'Unknown Source';
+    if (ip === 'multiple') return 'Botnet Cluster';
+    if (ip.includes('.com') || ip.includes('.net')) return 'Ext. Domain';
+    return ip;
+  }
+
+  formatDate(dateStr: string): string {
+    if (!dateStr) return '';
+    const d = new Date(dateStr);
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${d.getDate()} ${months[d.getMonth()]}`;
+  }
+
+  Math = Math;
 }

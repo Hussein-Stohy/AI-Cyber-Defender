@@ -43,7 +43,7 @@ import { Observable, catchError, of } from 'rxjs';
             </div>
           </div>
           <div class="mt-4 flex items-center gap-2">
-            <span [ngClass]="card.trend >= 0 ? 'text-green-500' : 'text-red-500'" class="flex items-center text-xs font-bold">
+            <span [ngClass]="getTrendColor(card)" class="flex items-center text-xs font-bold">
               <span *ngIf="card.trend >= 0">↑</span>
               <span *ngIf="card.trend < 0">↓</span>
               {{ card.trend > 0 ? '+' : '' }}{{ card.trend }}%
@@ -116,8 +116,8 @@ import { Observable, catchError, of } from 'rxjs';
                </ng-container>
             </svg>
             <div class="absolute flex flex-col items-center">
-              <span class="text-3xl font-black text-white">100%</span>
-              <span class="text-[10px] text-neutral-500 uppercase tracking-widest font-bold">Processed</span>
+              <span class="text-3xl font-black text-white">{{ totalAttacks }}</span>
+              <span class="text-[10px] text-neutral-500 uppercase tracking-widest font-bold">Attacks</span>
             </div>
           </div>
           
@@ -178,6 +178,7 @@ export class DashboardPage implements OnInit {
   linePathBorder: string = '';
   linePathArea: string = '';
   donutSegments: { color: string; dasharray: string; dashoffset: string; }[] = [];
+  totalAttacks: string = '0';
   isLoading = true;
   errorMessage = '';
 
@@ -202,6 +203,9 @@ export class DashboardPage implements OnInit {
       if (data) {
         this.calculatePaths(data.trends);
         this.calculateDonut(data.distributions);
+        // Set total attacks for donut center label
+        const totalCard = data.summary.find(c => c.title === 'Total Attacks');
+        this.totalAttacks = totalCard ? totalCard.value : '0';
       }
     });
   }
@@ -256,6 +260,7 @@ export class DashboardPage implements OnInit {
 
   private getSeverityColor(label: string): string {
     switch (label.toLowerCase()) {
+      case 'critical': return '#dc2626';
       case 'high': return '#ef4444';
       case 'medium': return '#f59e0b';
       case 'low': return '#0C8495';
@@ -273,9 +278,20 @@ export class DashboardPage implements OnInit {
 
   getSeverityColorClass(severity: string) {
     switch (severity.toLowerCase()) {
+      case 'critical': return 'bg-red-600';
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-amber-500';
+      case 'low': return 'bg-primary';
       default: return 'bg-primary';
     }
+  }
+
+  getTrendColor(card: any): string {
+    // Active Threats & High Severity: red when increasing, green when decreasing
+    if (card.title === 'Active Threats' || card.title === 'High Severity') {
+      return card.trend >= 0 ? 'text-red-500' : 'text-amber-500';
+    }
+    // Resolved: green when increasing
+    return card.trend >= 0 ? 'text-green-500' : 'text-red-500';
   }
 }
