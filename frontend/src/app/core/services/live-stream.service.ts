@@ -22,6 +22,7 @@ export class LiveStreamService {
   private seenIds = new Set<number>();
   private allEvents: LiveEvent[] = [];
   private pollIntervalMs = 4000;
+  private isFirstLoad = true;
 
   constructor(private http: HttpClient) {}
 
@@ -36,23 +37,40 @@ export class LiveStreamService {
         if (isPaused) return EMPTY;
 
         return timer(0, this.pollIntervalMs).pipe(
-          switchMap(() => this.fetchRecentAttacks()),
+          switchMap(() => {
+            this.fetchRealStats(); // Update stats on each poll
+            return this.fetchRecentAttacks();
+          }),
           switchMap(events => {
-            // Only emit events we haven't seen before
-            const newEvents = events.filter(e => !this.seenIds.has(Number(e.id)));
-            newEvents.forEach(e => this.seenIds.add(Number(e.id)));
-
-            // Update stats based on new data
-            if (newEvents.length > 0) {
-              this.updateStats(events);
+            if (this.isFirstLoad) {
+              // On first load, mark all existing ones as seen, but emit them so they appear
+              events.forEach(e => this.seenIds.add(Number(e.id)));
+              this.isFirstLoad = false;
+              return of(...events);
+            } else {
+              // On subsequent polls, only emit truly new events
+              const newEvents = events.filter(e => !this.seenIds.has(Number(e.id)));
+              newEvents.forEach(e => this.seenIds.add(Number(e.id)));
+              return of(...newEvents);
             }
-
-            // Emit each new event individually
-            return of(...newEvents);
           })
         );
       })
     );
+  }
+
+  private fetchRealStats(): void {
+    this.http.get<ApiResponse<any>>(`${environment.baseUrl}/api/dashboard/stats`).subscribe(res => {
+      if (res && res.data) {
+        const s = res.data;
+        this.stats$.next({
+          // Rough calculation for events per minute based on total today
+          eventsPerMinute: Math.round((s.totalAttacks / (Math.max(1, new Date().getHours() * 60))) * 10) / 10 || 0,
+          activeThreats: s.activeThreats || 0,
+          totalToday: s.totalAttacks || 0
+        });
+      }
+    });
   }
 
   getStats(): Observable<LiveStats> {
@@ -89,11 +107,6 @@ export class LiveStreamService {
   }
 
   private updateStats(allCurrentEvents: LiveEvent[]): void {
-    const highThreats = allCurrentEvents.filter(e => e.severity === 'high').length;
-    this.stats$.next({
-      eventsPerMinute: Math.min(allCurrentEvents.length, 20),
-      activeThreats: highThreats,
-      totalToday: this.seenIds.size
-    });
+    // Stats are now handled by fetchRealStats()
   }
 }
