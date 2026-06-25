@@ -12522,5 +12522,561 @@
       "source_ip": "185.234.219.5",
       "username": "Administrator"
     }
+  },
+  {
+    "generated_at": "2026-06-25T18:25:13.466295+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-06-25T18:25:13.460931Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 09:14:02 Security EventID=4624 An account was successfully logged on User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:25:13.655933+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:25:13.654959Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 11:50:03 Security EventID=4625 An account failed to log on User=Administrator SRC=185.234.219.5 FailureReason=Unknown user or bad password",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:25:20.258541+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-06-25T18:25:20.258269Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 09:14:02 Security EventID=4624 An account was successfully logged on User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:25:20.389840+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:25:20.389589Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 11:50:03 Security EventID=4625 An account failed to log on User=Administrator SRC=185.234.219.5 FailureReason=Unknown user or bad password",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:26:16.457346+00:00",
+    "source_type": "windows",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": "Ahmed",
+    "event_time": "2026-06-25T18:26:16.457093Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4624,
+      "task_category": "2024-04-17 09:14:02 Security EventID=4624 An account was successfully logged on User=Ahmed SRC=192.168.1.20",
+      "source_ip": "192.168.1.20",
+      "username": "Ahmed"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:26:16.610294+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:26:16.610103Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 11:50:03 Security EventID=4625 An account failed to log on User=Administrator SRC=185.234.219.5 FailureReason=Unknown user or bad password",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:09.627038+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:34:09.626762Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 11:50:03 Security EventID=4625 An account failed to log on User=Administrator SRC=185.234.219.5 FailureReason=Unknown user or bad password",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:12.338917+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-25T18:34:12.338595Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:15.566734+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-06-25T18:34:15.566425Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:18.787798+00:00",
+    "source_type": "network",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": null,
+    "event_time": "2026-06-25T18:34:18.787332Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Rate-limit or block the source IP.",
+        "Inspect firewall and IDS/IPS telemetry.",
+        "Escalate if attack volume increases."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.1.20",
+      "username": null
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:21.545638+00:00",
+    "source_type": "network",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 90.0,
+    "threat_level": "critical",
+    "attack_type": "DDoS / DoS",
+    "attack_name": "Network DDoS / DoS",
+    "source_ip": "185.220.101.45",
+    "username": null,
+    "event_time": "2026-06-25T18:34:21.545338Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Rate-limit or block the source IP.",
+        "Inspect firewall and IDS/IPS telemetry.",
+        "Escalate if attack volume increases."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "185.220.101.45",
+      "username": null
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:24.873533+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 90.0,
+    "threat_level": "critical",
+    "attack_type": "Privilege Enumeration",
+    "attack_name": "Windows Privilege Enumeration",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:34:24.873231Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4799,
+      "task_category": "2024-04-17 11:50:24 Security EventID=4799 A security-enabled local group membership was enumerated User=Administrator SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:28.340464+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 65.0,
+    "threat_level": "high",
+    "attack_type": "Suspicious Process Execution",
+    "attack_name": "Windows Suspicious Process Execution",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:34:28.337141Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4688,
+      "task_category": "2024-04-17 11:50:30 Security EventID=4688 A new process has been created Process=powershell.exe User=Administrator SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:51.376865+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "Brute Force / Failed Logon",
+    "attack_name": "Windows Brute Force / Failed Logon",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:34:51.376539Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4625,
+      "task_category": "2024-04-17 11:50:03 Security EventID=4625 An account failed to log on User=Administrator SRC=185.234.219.5 FailureReason=Unknown user or bad password",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:54.165484+00:00",
+    "source_type": "web",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": null,
+    "username": null,
+    "event_time": "2026-06-25T18:34:54.163121Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": null,
+      "url": "GET /home HTTP/1.1",
+      "query": "",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:34:57.342786+00:00",
+    "source_type": "web",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 78.0,
+    "threat_level": "high",
+    "attack_type": "SQL Injection",
+    "attack_name": "Web SQL Injection",
+    "source_ip": null,
+    "username": "admin",
+    "event_time": "2026-06-25T18:34:57.342265Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Inspect the endpoint and validate/sanitize input.",
+        "Review web server logs and block the source IP if needed.",
+        "Investigate recent suspicious requests."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": null,
+      "username": "admin",
+      "url": "GET /login?username=admin' OR 1=1--&password=x HTTP/1.1",
+      "query": "username=admin' OR 1=1--&password=x HTTP/1.1",
+      "body": ""
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:35:00.780735+00:00",
+    "source_type": "network",
+    "prediction": "normal",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 15.0,
+    "threat_level": "low",
+    "attack_type": "Normal Activity",
+    "attack_name": "Normal Activity",
+    "source_ip": "192.168.1.20",
+    "username": null,
+    "event_time": "2026-06-25T18:35:00.776302Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Rate-limit or block the source IP.",
+        "Inspect firewall and IDS/IPS telemetry.",
+        "Escalate if attack volume increases."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "192.168.1.20",
+      "username": null
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:35:03.560617+00:00",
+    "source_type": "network",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 90.0,
+    "threat_level": "critical",
+    "attack_type": "DDoS / DoS",
+    "attack_name": "Network DDoS / DoS",
+    "source_ip": "185.220.101.45",
+    "username": null,
+    "event_time": "2026-06-25T18:35:03.556211Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Rate-limit or block the source IP.",
+        "Inspect firewall and IDS/IPS telemetry.",
+        "Escalate if attack volume increases."
+      ]
+    ],
+    "raw_context": {
+      "source_ip": "185.220.101.45",
+      "username": null
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:35:06.720577+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 90.0,
+    "threat_level": "critical",
+    "attack_type": "Privilege Enumeration",
+    "attack_name": "Windows Privilege Enumeration",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:35:06.720206Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4799,
+      "task_category": "2024-04-17 11:50:24 Security EventID=4799 A security-enabled local group membership was enumerated User=Administrator SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
+  },
+  {
+    "generated_at": "2026-06-25T18:35:09.785768+00:00",
+    "source_type": "windows",
+    "prediction": "anomaly",
+    "anomaly_score": null,
+    "threshold": null,
+    "threat_score": 65.0,
+    "threat_level": "high",
+    "attack_type": "Suspicious Process Execution",
+    "attack_name": "Windows Suspicious Process Execution",
+    "source_ip": "185.234.219.5",
+    "username": "Administrator",
+    "event_time": "2026-06-25T18:35:09.782308Z",
+    "host": null,
+    "recommended_actions": [
+      [
+        "Review the affected host and recent Windows security events around the same time.",
+        "Verify whether the action was authorized.",
+        "Escalate to the security team if repeated."
+      ]
+    ],
+    "raw_context": {
+      "event_id": 4688,
+      "task_category": "2024-04-17 11:50:30 Security EventID=4688 A new process has been created Process=powershell.exe User=Administrator SRC=185.234.219.5",
+      "source_ip": "185.234.219.5",
+      "username": "Administrator"
+    }
   }
 ]

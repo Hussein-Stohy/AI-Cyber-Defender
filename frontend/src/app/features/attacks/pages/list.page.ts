@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -163,7 +163,7 @@ import { Attack, AttackFilters } from '../../../core/models/attack.model';
     }
   `]
 })
-export class AttacksListPage implements OnInit {
+export class AttacksListPage implements OnInit, OnDestroy {
   attacks: Attack[] = [];
   isLoading = false;
   errorMessage = '';
@@ -180,11 +180,25 @@ export class AttacksListPage implements OnInit {
   totalPages = 1;
 
   private debounceTimer: any;
+  private pollInterval: any;
 
   constructor(private attackService: AttackService) {}
 
   ngOnInit(): void {
     this.loadAttacks();
+    
+    // Auto-refresh every 5 seconds for real-time updates (only if on page 1)
+    this.pollInterval = setInterval(() => {
+      if (this.currentPage === 1 && !this.filters.search) {
+        this.loadAttacks(true);
+      }
+    }, 5000);
+  }
+
+  ngOnDestroy(): void {
+    if (this.pollInterval) {
+      clearInterval(this.pollInterval);
+    }
   }
 
   onFilterChange() {
@@ -196,8 +210,10 @@ export class AttacksListPage implements OnInit {
     }, 300);
   }
 
-  loadAttacks() {
-    this.isLoading = true;
+  loadAttacks(silent: boolean = false) {
+    if (!silent) {
+      this.isLoading = true;
+    }
     this.errorMessage = '';
 
     this.attackService.getAttacks(this.currentPage, this.pageSize, {

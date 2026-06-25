@@ -26,6 +26,7 @@ $router->get('/api/statistics', ['Controllers\StatisticsController', 'index'], [
 
 // AI Integration
 $router->post('/api/ai/analyze', ['Controllers\AiController', 'analyzeLog']); // Unprotected
+$router->post('/api/ingest-logs', ['Controllers\AiController', 'ingestLogs']); // Live Agent endpoint
 
 // Reports
 $router->get('/api/reports/{period}', ['Controllers\ReportController', 'generate'], [AuthMiddleware::class]);

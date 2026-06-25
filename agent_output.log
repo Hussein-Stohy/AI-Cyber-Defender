@@ -1,0 +1,48 @@
+
+[96m╔═══════════════════════════════════════════════════════════╗
+║  [1m🛡️  AI Cyber Defender — Live Log Agent[0m[96m                   ║
+╚═══════════════════════════════════════════════════════════╝[0m
+
+  [1m[21:34:49][0m [94m📁 Watching file: /home/hussein/Documents/my_prjects/my_prjects/AI-Cyber-Defender/live_logs.txt[0m
+  [1m[21:34:49][0m [94m📡 Source type: auto[0m
+  [1m[21:34:49][0m [94m🌐 Backend URL: http://127.0.0.1:8888/api/ingest-logs[0m
+
+  [1m[96m💡 Add logs to 'live_logs.txt' and they'll be analyzed in real-time![0m
+  [1m[96m   Example: echo '2024-04-17 EventID=4625 Failed login User=admin SRC=185.234.219.5' >> live_logs.txt[0m
+
+  [1m────────────────────────────────────────────────────────────[0m
+
+  [1m[21:34:51][0m [96m📥 Received log: 2024-04-17 11:50:03 Security EventID=4625 An account failed to log on User=Admin...[0m
+  [1m[21:34:52][0m [91m🚨 ALERT — Brute Force / Failed Logon[0m
+           [91mThreat: HIGH (score: 78)[0m
+           IP: 185.234.219.5 | DB ID: #113
+           📊 Dashboard updated automatically!
+
+  [1m[21:34:54][0m [96m📥 Received log: GET /home HTTP/1.1[0m
+  [1m[21:34:54][0m [92m✅ SAFE — Normal activity (score: 15)[0m
+  [1m[21:34:57][0m [96m📥 Received log: GET /login?username=admin' OR 1=1--&password=x HTTP/1.1[0m
+  [1m[21:34:57][0m [91m🚨 ALERT — SQL Injection[0m
+           [91mThreat: HIGH (score: 78)[0m
+           IP: None | DB ID: #114
+           📊 Dashboard updated automatically!
+
+  [1m[21:35:00][0m [96m📥 Received log: Apr 17 09:14:02 fw01 ACCEPT IN=eth0 OUT= SRC=192.168.1.20 DST=10.0.0.5 LEN=60 PR...[0m
+  [1m[21:35:01][0m [92m✅ SAFE — Normal activity (score: 15)[0m
+  [1m[21:35:03][0m [96m📥 Received log: May 3 14:05:23 fw01 kernel: [SYN Flood] DROP IN=eth0 OUT= SRC=185.220.101.45 DST...[0m
+  [1m[21:35:04][0m [91m🚨 ALERT — DDoS / DoS[0m
+           [91mThreat: CRITICAL (score: 90)[0m
+           IP: 185.220.101.45 | DB ID: #115
+           📊 Dashboard updated automatically!
+
+  [1m[21:35:06][0m [96m📥 Received log: 2024-04-17 11:50:24 Security EventID=4799 A security-enabled local group members...[0m
+  [1m[21:35:07][0m [91m🚨 ALERT — Privilege Enumeration[0m
+           [91mThreat: CRITICAL (score: 90)[0m
+           IP: 185.234.219.5 | DB ID: #116
+           📊 Dashboard updated automatically!
+
+  [1m[21:35:09][0m [96m📥 Received log: 2024-04-17 11:50:30 Security EventID=4688 A new process has been created Process...[0m
+  [1m[21:35:10][0m [91m🚨 ALERT — Suspicious Process Execution[0m
+           [91mThreat: HIGH (score: 65)[0m
+           IP: 185.234.219.5 | DB ID: #117
+           📊 Dashboard updated automatically!
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardService } from '../../core/services/dashboard.service';
 import { DashboardData } from '../../core/models/dashboard.model';
@@ -172,7 +172,7 @@ import { Observable, catchError, of } from 'rxjs';
     :host { display: block; }
   `]
 })
-export class DashboardPage implements OnInit {
+export class DashboardPage implements OnInit, OnDestroy {
   data$!: Observable<DashboardData>;
   points: {x: number, y: number}[] = [];
   linePathBorder: string = '';
@@ -181,15 +181,28 @@ export class DashboardPage implements OnInit {
   totalAttacks: string = '0';
   isLoading = true;
   errorMessage = '';
+  private pollInterval: any;
 
   constructor(private dashboardService: DashboardService) {}
 
   ngOnInit(): void {
     this.loadData();
+    // Auto-refresh every 5 seconds for real-time updates
+    this.pollInterval = setInterval(() => {
+      this.loadData(true);
+    }, 5000);
   }
 
-  loadData(): void {
-    this.isLoading = true;
+  ngOnDestroy(): void {
+    if (this.pollInterval) {
+      clearInterval(this.pollInterval);
+    }
+  }
+
+  loadData(silent: boolean = false): void {
+    if (!silent) {
+      this.isLoading = true;
+    }
     this.errorMessage = '';
     this.data$ = this.dashboardService.getDashboardData().pipe(
       catchError(err => {
