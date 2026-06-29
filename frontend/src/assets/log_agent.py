@@ -3,11 +3,11 @@
 ╔═══════════════════════════════════════════════════════════════╗
 ║           AI Cyber Defender — Live Log Monitoring Agent       ║
 ║                                                               ║
-║  يراقب ملف logs بشكل حي ويبعث كل سطر جديد للـ Backend          ║
-║  الـ Backend يحلله بالذكاء الاصطناعي ويحفظ التهديدات            ║
+║  يراقب ملف logs بشكل حي ويبعث كل سطر جديد للـ Backend        ║
+║  الـ Backend يحلله بالذكاء الاصطناعي ويحفظ التهديدات          ║
 ║                                                               ║
-║  الاستخدام:                                                    ║
-║    python3 log_agent.py                                       ║   
+║  الاستخدام:                                                   ║
+║    python3 log_agent.py                                       ║
 ║    python3 log_agent.py --file /var/log/auth.log              ║
 ║    python3 log_agent.py --source network                      ║
 ╚═══════════════════════════════════════════════════════════════╝

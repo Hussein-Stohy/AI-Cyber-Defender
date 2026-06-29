@@ -62,7 +62,8 @@ export class SidebarComponent {
     { label: 'Dashboard', path: '/dashboard', icon: '📊', exact: true },
     { label: 'Attacks', path: '/attacks', icon: '⚔️', exact: false },
     { label: 'Live Alerts', path: '/live', icon: '📡', exact: true },
-    { label: 'Statistics', path: '/statistics', icon: '📈', exact: true }
+    { label: 'Statistics', path: '/statistics', icon: '📈', exact: true },
+    { label: 'AI Simulator', path: '/ai-simulator', icon: '🤖', exact: true }
   ];
 
   toggleSidebar() {

@@ -22,7 +22,7 @@ import { Observable, catchError, of } from 'rxjs';
       <button (click)="retry()" class="px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg uppercase tracking-widest">Retry</button>
     </div>
 
-    <div class="space-y-8 pb-12" *ngIf="data$ | async as data">
+    <div class="space-y-8 pb-12" *ngIf="data">
       <!-- Header -->
       <header>
         <h1 class="text-3xl font-bold tracking-tight text-white">Security Command Center</h1>
@@ -173,7 +173,7 @@ import { Observable, catchError, of } from 'rxjs';
   `]
 })
 export class DashboardPage implements OnInit, OnDestroy {
-  data$!: Observable<DashboardData>;
+  data: DashboardData | null = null;
   points: {x: number, y: number}[] = [];
   linePathBorder: string = '';
   linePathArea: string = '';
@@ -204,20 +204,20 @@ export class DashboardPage implements OnInit, OnDestroy {
       this.isLoading = true;
     }
     this.errorMessage = '';
-    this.data$ = this.dashboardService.getDashboardData().pipe(
+    this.dashboardService.getDashboardData().pipe(
       catchError(err => {
         this.errorMessage = 'Failed to load dashboard data. Please check your connection.';
         this.isLoading = false;
         return of(null as any);
       })
-    );
-    this.data$.subscribe(data => {
+    ).subscribe(data => {
       this.isLoading = false;
       if (data) {
+        this.data = data;
         this.calculatePaths(data.trends);
         this.calculateDonut(data.distributions);
         // Set total attacks for donut center label
-        const totalCard = data.summary.find(c => c.title === 'Total Attacks');
+        const totalCard = data.summary.find((c: any) => c.title === 'Total Attacks');
         this.totalAttacks = totalCard ? totalCard.value : '0';
       }
     });
